@@ -2,6 +2,18 @@
 #include "LockState.h"
 #include "ConversionWchar.h"
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Примеры к докладу "Создание внешних компонент для мобильной платформы 1С ОС Андроид"
+// на конференции INFOSTART 2018 EVENT EDUCATION https://event.infostart.ru/2018/
+//
+// Пример 1: Информация об устройстве - получение серийного номера
+// Пример 2: Блокировка устройства - передача в 1С внешнего события об изменении состояния экрана
+//
+// Copyright Игорь Кисиль 2018
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
 LockState::LockState() : cc(nullptr), obj(nullptr)
 {
 }
@@ -10,7 +22,7 @@ LockState::~LockState()
 {
 	if (obj)
 	{
-		Stop();
+		Stop(); // вызываем, чтобы гарантированно удалить регистрацию BroadcastReceiver'а
 		JNIEnv *env = getJniEnv();
 		env->DeleteGlobalRef(obj);
 		env->DeleteGlobalRef(cc);
@@ -72,6 +84,8 @@ static const wchar_t g_EventName[] = L"LockChanged";
 static WcharWrapper s_EventSource(g_EventSource);
 static WcharWrapper s_EventName(g_EventName);
 
+// имя функции построено в соответствии с правилами Java native call
+//
 extern "C" JNIEXPORT void JNICALL Java_ru_infostart_education_LockState_OnLockChanged(JNIEnv* env, jclass jClass, jlong pObject, jlong pMemory, jboolean isLocked)
 {
 	IAddInDefBaseEx* pAddIn = (IAddInDefBaseEx*)pObject;

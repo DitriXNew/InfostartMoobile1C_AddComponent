@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.6">
+	<ConfigVersions>
+		<Metadata name="CommonForm.ФормаАктивации" id="2cf5bca2-73f6-4b8d-ac4b-4934b688d357" configVersion="35c3d83b11ad6442bc0a18006f5af83b00000000"/>
+		<Metadata name="CommonForm.ФормаАктивации.Form" id="2cf5bca2-73f6-4b8d-ac4b-4934b688d357.0" configVersion="9185b7082103994795b56a2d05e8046200000000"/>
+		<Metadata name="CommonForm.ФормаНачалаРаботы" id="0c1d3543-9373-4fa1-8648-721dded3004c" configVersion="a360583807d36944bda306dbbd330d4100000000"/>
+		<Metadata name="CommonForm.ФормаНачалаРаботы.Form" id="0c1d3543-9373-4fa1-8648-721dded3004c.0" configVersion="89ba4e1f2b66cf409edb59b4b4f7764800000000"/>
+		<Metadata name="CommonModule.ОбщегоНазначенияКлиент" id="26633231-77fa-4839-9a27-a61bea301be1" configVersion="b6a5bb0853293945a6c516039a12b7ca00000000"/>
+		<Metadata name="CommonModule.ОбщегоНазначенияКлиент.Module" id="26633231-77fa-4839-9a27-a61bea301be1.0" configVersion="de5e6a1f7b8e8c43b19de3ee71415a9100000000"/>
+		<Metadata name="CommonTemplate.Компонента" id="6f192001-0b72-4b2b-88a0-cfe267f3ffc8" configVersion="af2f4cf6c9c65945abdb1ed5b406a20900000000"/>
+		<Metadata name="CommonTemplate.Компонента.Template" id="6f192001-0b72-4b2b-88a0-cfe267f3ffc8.0" configVersion="12fd455e4a3cb44bb911c46a1a3c904900000000"/>
+		<Metadata name="Configuration.Infostart2018" id="9ae85d5e-4751-45c7-a602-fdac48ca95e5" configVersion="15fef106f8368f45bc4c53b3aa58100c00000000"/>
+		<Metadata name="Configuration.Infostart2018.HomePageWorkArea" id="e6776e27-03b6-4530-8933-08844a9ec01c.8" configVersion="4832569723f1ae4481824df6c1a3ed9d00000000"/>
+		<Metadata name="Configuration.Infostart2018.ManagedApplicationModule" id="e6776e27-03b6-4530-8933-08844a9ec01c.6" configVersion="b665074995a4ac41848f73596523f89d00000000"/>
+		<Metadata name="Language.Русский" id="b3632e22-ee03-408f-8515-da02dd8a5c4c" configVersion="5feafe3577e6d94abdb5c73c3f1d924c00000000"/>
+	</ConfigVersions>
+</ConfigDumpInfo>

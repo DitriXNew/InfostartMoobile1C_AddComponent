@@ -37,6 +37,9 @@
     <Filter Include="jni">
       <UniqueIdentifier>{f42f034c-8065-4e18-be22-1d9a04fcd034}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Package">
+      <UniqueIdentifier>{e949da29-184e-4ead-be99-bcca93b63e7c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\jni\jnienv.cpp">
@@ -45,5 +48,13 @@
     <ClCompile Include="AddInNative.cpp" />
     <ClCompile Include="ConversionWchar.cpp" />
     <ClCompile Include="LockState.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\Package\ANDROID_MANIFEST_EXTENTIONS.XML">
+      <Filter>Package</Filter>
+    </Xml>
+    <Xml Include="..\..\Package\manifest.xml">
+      <Filter>Package</Filter>
+    </Xml>
   </ItemGroup>
 </Project>

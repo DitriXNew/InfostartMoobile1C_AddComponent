@@ -178,6 +178,10 @@
     <ClCompile Include="ConversionWchar.cpp" />
     <ClCompile Include="LockState.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\Package\ANDROID_MANIFEST_EXTENTIONS.XML" />
+    <Xml Include="..\..\Package\manifest.xml" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
 </Project>

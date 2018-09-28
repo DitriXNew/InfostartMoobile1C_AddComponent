@@ -1,18 +1,34 @@
 package ru.infostart.education;
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Примеры к докладу "Создание внешних компонент для мобильной платформы 1С ОС Андроид"
+// на конференции INFOSTART 2018 EVENT EDUCATION https://event.infostart.ru/2018/
+//
+// Пример 1: Информация об устройстве - получение серийного номера (не нуждается в JAVA коде, поэтому
+//           в проекте не содержится
+// Пример 2: Блокировка устройства - передача в 1С внешнего события об изменении состояния экрана
+//
+// Copyright Игорь Кисиль 2018
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 
+// Проект 2 start
+
 public class LockState implements Runnable {
 
+  // эта функция в C/C++ должна иметь имя Java__ru_infostart_education_LockState_OnLockChanged
   static native void OnLockChanged(long pObject,long pMemory,boolean isLocked);
 
   private long m_V8Object;
   private long m_MemoryManager;
-  private Activity m_Activity;
+  private Activity m_Activity; // хранит контекст приложения 1С
   private BroadcastReceiver m_Receiver;
 
   public LockState(Activity activity, long v8Object, long v8Memory)

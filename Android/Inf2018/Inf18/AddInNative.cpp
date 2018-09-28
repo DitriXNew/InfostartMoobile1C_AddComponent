@@ -4,8 +4,18 @@
 #include "wchar.h"
 #include "../jni/jnienv.h"
 #include "../include/IAndroidComponentHelper.h"
-#include <chrono>
-#include <thread>
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Примеры к докладу "Создание внешних компонент для мобильной платформы 1С ОС Андроид"
+// на конференции INFOSTART 2018 EVENT EDUCATION https://event.infostart.ru/2018/
+//
+// Пример 1: Информация об устройстве - получение серийного номера
+// Пример 2: Блокировка устройства - передача в 1С внешнего события об изменении состояния экрана
+//
+// Copyright Игорь Кисиль 2018
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////
 
 static const wchar_t *g_PropNames[] = 
 {
@@ -189,7 +199,7 @@ bool Infostart2018AddIn::GetPropVal(const long lPropNum, tVariant* pvarPropVal)
 {
 	switch (lPropNum)
 	{
-	// Проект1
+	// Проект1 start
 	case ePropSerial:
 	{
 		IAndroidComponentHelper* helper = (IAndroidComponentHelper*)m_iConnect->GetInterface(eIAndroidComponentHelper);
@@ -197,7 +207,7 @@ bool Infostart2018AddIn::GetPropVal(const long lPropNum, tVariant* pvarPropVal)
 		if (helper)
 		{
 			WCHAR_T* className = nullptr;
-			convToShortWchar(&className, L"android.os.Build$VERSION");
+			convToShortWchar(&className, L"android.os.Build$VERSION"); // согласно правилам вызова подкласса в JNI
 			jclass ccloc = helper->FindClass(className);
 			delete[] className;
 			className = nullptr;
@@ -231,10 +241,13 @@ bool Infostart2018AddIn::GetPropVal(const long lPropNum, tVariant* pvarPropVal)
 		}
 	}
 	return true;
+	// Проект 1 end
+	// Проект 2 start
 	case ePropScreen:
 		pvarPropVal->vt = VTYPE_BOOL;
 		pvarPropVal->bVal = isScreenOn;
 		return true;
+	// Проект 2 end
 	default:
 		return false;
 	}
@@ -245,6 +258,7 @@ bool Infostart2018AddIn::SetPropVal(const long lPropNum, tVariant *varPropVal)
 {
 	switch (lPropNum)
 	{
+		// Проект 2 start
 	case ePropScreen:
 		m_devState.Initialize(m_iConnect, m_iMemory);
 		if (varPropVal->vt == VTYPE_BOOL)
@@ -256,6 +270,7 @@ bool Infostart2018AddIn::SetPropVal(const long lPropNum, tVariant *varPropVal)
 				m_devState.Stop();
 		}
 		return true;
+		// Проект 2 end
 	default:
 		return false;
 	}
