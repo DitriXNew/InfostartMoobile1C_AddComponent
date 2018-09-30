@@ -7,6 +7,7 @@
 //
 
 #import "DeviceInfo.h"
+#import "DeviceInfo-C.h"
 #import <UIKit/UIKit.h>
 
 wchar_t * GetDeviceModel()
@@ -36,6 +37,13 @@ uint16_t GetBatteryLevel()
     }
     
     return [UIDevice currentDevice].batteryLevel * 100;
+}
+
+wchar_t * GetIdForVendor()
+{
+    NSString * identifierForVendor = [[UIDevice currentDevice].identifierForVendor UUIDString];
+    
+    return [DeviceInfo convertNSStringToWchar:identifierForVendor];
 }
 
 @implementation DeviceInfo

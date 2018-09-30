@@ -32,6 +32,7 @@ public:
         eMethModel = 0,
         eMethSystemInfo,
         eMethSystemVer,
+        eMethIdForVendor,
         eMethBatteryLevel,
         eLastMethod      // Always last
     };

@@ -13,5 +13,6 @@ wchar_t * GetDeviceModel();
 wchar_t * GetSytemInfo();
 wchar_t * GetSystemVersion();
 uint16_t GetBatteryLevel();
+wchar_t * GetIdForVendor();
 
 #endif /* DeviceInfo_C_h */

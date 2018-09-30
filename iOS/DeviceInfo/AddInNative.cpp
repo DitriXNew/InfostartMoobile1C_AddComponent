@@ -21,12 +21,14 @@ namespace infostart_event_2018_devinfo
         L"GetDeviceModel",
         L"GetSytemInfo",
         L"GetSystemVersion",
+        L"GetIdentifierForVendor",
         L"GetBatteryLevel"};
     
     static const wchar_t *g_MethodNamesRu[] =
     {L"ПолучитьМодельУстройства",
         L"ПолучитьСистемнуюИнформацию",
         L"ПолучитьВерсиюСистемы",
+        L"ПолучитьИдентификаторДляВендора"
         L"ПолучитьУровеньЗарядаБатареи"};
     
     static const wchar_t *g_PropNames[] =
@@ -325,6 +327,13 @@ bool AddinNative::CallAsFunc(const long lMethodNum,
         case eMethSystemInfo:
         {
             res = GetSytemInfo();
+            addStrToTVariant(pvarRetValue, res);
+            return true;
+        }
+            break;
+        case eMethIdForVendor:
+        {
+            res = GetIdForVendor();
             addStrToTVariant(pvarRetValue, res);
             return true;
         }
