@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:../../../../TestFBA/com.hvoya.container 2.9.10 (2)/com.hvoya.container 2.9.10/1cem.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:">
+   </FileRef>
+</Workspace>
