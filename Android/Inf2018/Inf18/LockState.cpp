@@ -86,16 +86,13 @@ static WcharWrapper s_EventName(g_EventName);
 
 // имя функции построено в соответствии с правилами Java native call
 //
-extern "C" JNIEXPORT void JNICALL Java_ru_infostart_education_LockState_OnLockChanged(JNIEnv* env, jclass jClass, jlong pObject, jlong pMemory, jboolean isLocked)
+extern "C" JNIEXPORT void JNICALL Java_ru_infostart_education_LockState_OnLockChanged(JNIEnv* env, jclass jClass, 
+			jlong pObject, jlong pMemory, jboolean isLocked)
 {
 	IAddInDefBaseEx* pAddIn = (IAddInDefBaseEx*)pObject;
 	IMemoryManager* pMem = (IMemoryManager*)pMemory;
 	WCHAR_T *wData;
-	wchar_t* sData;
-	if (isLocked)
-		sData = L"Locked";
-	else
-		sData = L"Unlocked";
+	const wchar_t* sData = isLocked ? L"Locked" : L"Unlocked";
 	pMem->AllocMemory((void**)&wData, (wcslen(sData) + 1) * sizeof(WCHAR_T));
 	convToShortWchar(&wData, sData);
 
