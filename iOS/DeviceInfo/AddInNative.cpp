@@ -28,7 +28,7 @@ namespace infostart_event_2018_devinfo
     {L"ПолучитьМодельУстройства",
         L"ПолучитьСистемнуюИнформацию",
         L"ПолучитьВерсиюСистемы",
-        L"ПолучитьИдентификаторДляВендора"
+        L"ПолучитьИдентификаторДляВендора",
         L"ПолучитьУровеньЗарядаБатареи"};
     
     static const wchar_t *g_PropNames[] =
@@ -63,7 +63,7 @@ long GetClassObject(const WCHAR_T* wsName, IComponentBase** pInterface)
     if(!*pInterface)
     {
         *pInterface = new AddinNative();
-        return (long)*pInterface;
+        return (long) *pInterface;
     }
     #endif
     return 0;
@@ -288,6 +288,7 @@ bool AddinNative::HasRetVal(const long lMethodNum)
         case eMethModel:
         case eMethSystemVer:
         case eMethSystemInfo:
+        case eMethIdForVendor:
         case eMethBatteryLevel:
             return true;
             break;

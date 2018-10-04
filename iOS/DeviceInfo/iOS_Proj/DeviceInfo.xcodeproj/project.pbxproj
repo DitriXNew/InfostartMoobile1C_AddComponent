@@ -76,9 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				30F601D41F8503310074414E /* include */,
-				1FED365E1C0862920067695E /* ConversionWchar.h */,
 				1FED365D1C0862920067695E /* ConversionWchar.cpp */,
 				1FE2DA511BFDD771001EE409 /* AddInNative.h */,
+				1FED365E1C0862920067695E /* ConversionWchar.h */,
 				30B777581F8FECDD0094FC02 /* AddInNative.cpp */,
 				300C8C19214ECA120060B2A3 /* DeviceInfo-C.h */,
 				300C8C1A214ECA220060B2A3 /* DeviceInfo.h */,

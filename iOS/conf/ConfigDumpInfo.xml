@@ -9,8 +9,8 @@
 		<Metadata name="DataProcessor.ИнформацияОбУстройстве" id="044ab70f-13ec-43bb-a36e-f3dd4f569100" configVersion="8ff2592fb3e5ee44861c95582504a8f200000000"/>
 		<Metadata name="DataProcessor.ИнформацияОбУстройстве.Form.Форма" id="71cdef0e-e82a-4bf6-8ca5-34c408b9dd8c" configVersion="8f4bcfdbb7c0c841813607010cf6df9e00000000"/>
 		<Metadata name="DataProcessor.ИнформацияОбУстройстве.Form.Форма.Form" id="71cdef0e-e82a-4bf6-8ca5-34c408b9dd8c.0" configVersion="b63eb35bed7cf9458e59a186e5f02a8e00000000"/>
-		<Metadata name="DataProcessor.ИнформацияОбУстройстве.Template.Компонента" id="d555961b-c8ae-45ae-be9c-7dd144b08112" configVersion="cdd56d7482c17d48afdd663d7d07bd9300000000"/>
-		<Metadata name="DataProcessor.ИнформацияОбУстройстве.Template.Компонента.Template" id="d555961b-c8ae-45ae-be9c-7dd144b08112.0" configVersion="db616033924a5c4abfd8d13d08d457f700000000"/>
+		<Metadata name="DataProcessor.ИнформацияОбУстройстве.Template.Компонента" id="d555961b-c8ae-45ae-be9c-7dd144b08112" configVersion="930aebe4a2875740bef94f98723670fc00000000"/>
+		<Metadata name="DataProcessor.ИнформацияОбУстройстве.Template.Компонента.Template" id="d555961b-c8ae-45ae-be9c-7dd144b08112.0" configVersion="9663962fed2d364ba85c50a340375fe600000000"/>
 		<Metadata name="DataProcessor.СобытиеБлокировки" id="c69bf574-d3ff-4503-a401-42d093e0dc4a" configVersion="f06e587ad6b1ec4bb700d2afd9d93e6700000000"/>
 		<Metadata name="DataProcessor.СобытиеБлокировки.Form.Форма" id="6483da88-7492-44f0-b1d3-bf2f93805feb" configVersion="76aa7ce5cc20a042a3f956d682419df300000000"/>
 		<Metadata name="DataProcessor.СобытиеБлокировки.Form.Форма.Form" id="6483da88-7492-44f0-b1d3-bf2f93805feb.0" configVersion="474d24563dcf0740a7c98b3de7cc088300000000"/>
