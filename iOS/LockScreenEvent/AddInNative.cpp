@@ -5,7 +5,7 @@
 #if defined(__APPLE__)||defined(__ANDROID__)
 
 #include <wchar.h>
-#include "iOS_Proj/LockEvent.h";
+#include "iOS_Proj/LockEvent.h"
 
 #endif
 
