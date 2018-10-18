@@ -36,7 +36,7 @@ uint16_t GetBatteryLevel()
         [device setBatteryMonitoringEnabled:YES];
     }
     
-    return [UIDevice currentDevice].batteryLevel * 100;
+    return device.batteryLevel * 100;
 }
 
 wchar_t * GetIdForVendor()

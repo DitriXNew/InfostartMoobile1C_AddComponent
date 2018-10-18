@@ -431,7 +431,7 @@ void AddinNative::addStrToTVariant(tVariant* tvar, wchar_t* string)
     WCHAR_T *result = 0;
     uint32_t stringSize = static_cast<uint32_t>(wcslen(string));
     
-    if (m_iMemory->AllocMemory((void**) &result, stringSize * sizeof(WCHAR_T))) {
+    if (m_iMemory->AllocMemory((void**) &result, (stringSize+1) * sizeof(WCHAR_T))) {
         convToShortWchar(&result, string);
         TV_VT(tvar) = VTYPE_PWSTR;
         TV_WSTR(tvar) = result;
